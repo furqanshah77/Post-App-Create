@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "Segoe ui historic", sans-serif;
+    src: url(./font/Segoe\ ui\ historic.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Segoe ui historic";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 550px;
+    margin: auto;
+    border-radius: 16px;
+    border: 1px solid;
+    overflow: auto;
+}
+
+.topBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.topBar h1 {
+    width: 90%;
+    text-align: center;
+}
+
+.topBar span {
+    text-align: center;
+    width: 40px;
+    background-color: #e4e6eb;
+    border-radius: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topBar i {
+    font-size: 25px;
+    font-weight: 600 !important;
+    cursor: pointer;
+}
+
+.profile-img img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+}
+
+.profileName {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.profile {
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.profile p {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.publicPara {
+    display: flex;
+    gap: 8px;
+    padding: 4px 0px;
+    background-color: #E4E6EB;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 16px !important;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.center {
+    height: 30%;
+    width: 100%;
+}
+
+.center textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    font-size: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+textarea::placeholder {
+    font-size: 25px;
+    color: #77797C;
+}
+
+textarea:focus {
+    border: none;
+}
+
+.optOne {
+    background-color: #f0f2f5;
+}
+
+.backgroundPicker {
+    display: flex;
+    align-items: center;
+}
+
+.backgroundOpt {
+    display: none;
+    gap: 5px;
+    transition: 1s ease-out;
+
+}
+
+.backgroundOpt img,
+.backgroundOpt div {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.optTen {
+    background-color: #fff;
+    border: 2px #000;
+    box-shadow: inset 0 0 0 2px rgb(69, 69, 69), 0 0 3px 0 rgb(69, 69, 69);
+    cursor: pointer;
+}
+
+.optSeven {
+    background-color: #C600FF;
+    box-shadow: inset 0 0 0 2px rgb(230, 120, 220), 0 0 3px 0 rgb(230, 120, 220);
+    cursor: pointer;
+}
+
+.optEight {
+    background-color: #E2013B;
+    box-shadow: inset 0 0 0 2px rgb(250, 130, 130), 0 0 3px 0 rgb(250, 130, 130);
+    cursor: pointer;
+}
+
+.optNine {
+    background-color: black;
+    box-shadow: inset 0 0 0 2px rgb(200, 200, 200), 0 0 3px 0 rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.backgroundOpt>span>i {
+    display: flex;
+    margin-left: 5px;
+    font-size: 1.7rem;
+}
+
+.background,
+.background img {
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.toggleOpen {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 10px;
+    top: 7px;
+    background-color: #E4E6EB;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.toggleBox {
+    cursor: pointer;
+}
+
+.tagOption {
+    display: flex;
+    margin: 10px 10px 0px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 800;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.icons span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.icons i:hover {
+    background-color: #E4E6EB;
+}
+
+.icons span:first-child i:first-child {
+    color: #45BD62;
+}
+
+#post {
+    padding: 10px 10px;
+    border-radius: 8px;
+    margin: 10px;
+    border: none;
+    background-color: #1877F2;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#textColor {
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    padding: -3px;
+    border: 2px #000;
+    box-shadow: inset 0 0 0 2px rgb(69, 69, 69), 0 0 3px 0 rgb(69, 69, 69);
+    outline: none;
+    cursor: pointer;
+}
+
+.resultBox {
+    padding: 0px 10px;
+    font-size: 15px;
+
+}
+
+#result p {
+    background-color: #E4E6EB;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px 10px;
+}
