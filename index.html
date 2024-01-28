@@ -18,7 +18,7 @@
         <div class="topBar">
             <h1>Create Post
             </h1>
-            <span><i class="fa-solid fa-xmark"></i></span>
+            <span style="cursor: pointer;"><i class="fa-solid fa-xmark" id="cancel"></i></span>
         </div>
         <hr>
         <div class="profile">
@@ -42,7 +42,7 @@
             </div>
             <div class="backgroundOpt" id="backgroundOpt">
                 <input type="color" id="textColor" value="#808080" onchange="textColorChange()">
-                <!-- <input type="range" name="" id="range"> -->
+                <!-- <input type="range" name="" id="range">-->
                 <img src="./img/images.jpeg" alt="" onclick="changeBackground()">
                 <img src="./img/pexels-photo-949587.webp" alt="" onclick="changeBackground()">
                 <img src="./img/istockphoto-1330343437-612x612.jpg" alt="" onclick="changeBackground()">
@@ -70,7 +70,13 @@
         </div>
         <button id="post">Post</button>
         <div id="result">
+            <!-- <p>
 
+            </p> -->
+            <div class="btmBar">
+                <span id="like"><i class="fa-regular fa-thumbs-up"></i></span>
+                <span id="comment"><i class="fa-regular fa-comment"></i></span>
+            </div>
         </div>
     </div>
 

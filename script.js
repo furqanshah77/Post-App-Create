@@ -54,12 +54,12 @@ function changeBackgroundColorDefult() {
 
 function changeTextBold() {
 
-    let textType = document.getElementById("bold");
-    if (textType == document.getElementById("bold")) {
+    let bold = document.getElementById(`bold`)
+    let textType = bold;
+    if (textType == bold) {
         if (textarea.style.fontWeight === "bold") {
             textarea.style.fontWeight = "normal";
         } else {
-
             textarea.style.fontWeight = "bold";
         }
     }
@@ -68,12 +68,12 @@ function changeTextBold() {
 
 function changeTextItalic() {
 
-    let textType = document.getElementById("italic");
-    if (textType == document.getElementById("italic")) {
+    let italic = document.getElementById(`italic`)
+    let textType = italic;
+    if (textType == italic) {
         if (textarea.style.fontStyle === "italic") {
             textarea.style.fontStyle = "normal";
         } else {
-
             textarea.style.fontStyle = "italic";
         }
     }
@@ -82,12 +82,12 @@ function changeTextItalic() {
 
 function changeTextUnderline() {
 
-    let textType = document.getElementById("underline");
-    if (textType == document.getElementById("underline")) {
+    let underline = document.getElementById(`underline`)
+    let textType = underline;
+    if (textType == underline) {
         if (textarea.style.textDecoration === "underline") {
             textarea.style.textDecoration = "none";
         } else {
-
             textarea.style.textDecoration = "underline";
         }
     }
@@ -101,7 +101,7 @@ background.addEventListener('click', () => {
     document.getElementById("bgImg").style.display = "none";
     document.getElementById("backgroundOpt").style.display = "flex";
 
-    // console.log("Toggle On");
+    console.log("Toggle On");
 })
 
 document.getElementById("toggleArrow").addEventListener('click', () => {
@@ -111,3 +111,83 @@ document.getElementById("toggleArrow").addEventListener('click', () => {
 
     // console.log("Toggle Off");
 })
+
+// post.addEventListener('click', () => {
+//     let inputText = textarea.value;
+
+//     result.innerHTML += `<p> ${inputText} </p>
+//     <div class="btmBar">
+//     <span id="like"><i class="fa-regular fa-thumbs-up"></i></span>
+//     <span id="comment"><i class="fa-regular fa-comment"></i></span>
+// </div>`;
+
+//     textarea.value = "";
+// })
+
+
+post.addEventListener('click', () => {
+    let inputText = textarea.value;
+
+    textarea.readOnly = true;
+    textarea.style.height = "300px";
+    center.style.height = "400px";
+    document.querySelector(".tagOption").style.display = "none"
+    document.querySelector(".backgroundPicker").style.display = "none"
+    document.getElementById("post").style.display = "none"
+    document.querySelector(".btmBar").style.display = "flex"
+})
+
+
+// cancel.addEventListener("click", () => {
+//     // document.getElementById("backgroundOpt").style.display = "flex";
+//     // document.getElementById("bgImg").style.display = "none";
+//     // document.getElementById("toggleArrow").style.display = "flex";
+//     document.getElementById("toggleArrow").addEventListener('click', () => {
+//         document.getElementById("backgroundOpt").style.display = "none";
+//         document.getElementById("bgImg").style.display = "flex";
+//         document.getElementById("toggleArrow").style.display = "none";
+
+//         // console.log("Toggle Off");
+//     })
+
+
+//     background.addEventListener('click', () => {
+
+//         document.getElementById("toggleArrow").style.display = "flex";
+//         document.getElementById("bgImg").style.display = "none";
+//         document.getElementById("backgroundOpt").style.display = "flex";
+
+//         // console.log("Toggle On");
+//     })
+//     document.querySelector(".tagOption").style.display = "flex";
+//     document.querySelector(".backgroundPicker").style.display = "block";
+//     document.getElementById("post").style.display = "block";
+//     document.querySelector(".btmBar").style.display = "none";
+//     textarea.style.height = "30%";
+//     center.style.height = "100%";
+//     document.getElementById("backgroundOpt").remove();
+
+//     textarea.value = "";
+//     textarea.readOnly= false
+// });
+
+cancel.addEventListener("click", () => {
+    document.querySelector(".tagOption").style.display = "flex";
+    document.querySelector(".backgroundPicker").style.display = "block";
+    document.getElementById("post").style.display = "block";
+    document.querySelector(".btmBar").style.display = "none";
+    textarea.style.height = "30%";
+    center.style.height = "100%";
+    document.getElementById("backgroundOpt").remove();
+
+    // Reset background options to default
+    document.getElementById("toggleArrow").style.display = "none";
+    document.getElementById("bgImg").style.display = "flex";
+    // document.getElementById("backgroundOpt").style.display = "none";
+
+    // Clear textarea content and make it editable
+    textarea.value = "";
+    textarea.readOnly = false;
+});
+
+

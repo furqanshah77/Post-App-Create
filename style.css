@@ -20,7 +20,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 550px;
     width: 550px;
     margin: auto;
     border-radius: 16px;
@@ -265,8 +265,35 @@ textarea:focus {
 }
 
 #result p {
+    height: 100%;
     background-color: #E4E6EB;
     padding: 10px;
+    border: 1px solid gray;
     border-radius: 8px;
     margin: 0px 10px;
+}
+
+.btmBar {
+    display: flex;
+    align-items: center;
+    display: none;
+    background-color: #E4E6EB;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-radius: 4px;
+    margin: 8px;
+
+}
+
+.btmBar>span {
+    width: 49%;
+    background-color: #E4E6EB;
+    text-align: center;
+    font-size: 30px;
+}
+
+#bold,
+#italic,
+#underline {
+    cursor: pointer;
 }
